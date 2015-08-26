@@ -19,9 +19,15 @@ fi
 if test $IS_MAC; then
     export LSCOLORS=xbfxcxdxbxegedabagacad
     alias ls='ls -G'
+    alias ll="ls -l"
+    alias la="ls -a"
+    alias lla="ls -la"
 else
     eval `dircolors ~/.colorrc`
     alias ls='ls --color=auto'
+    alias ll='ls -l'
+    alias la='ls -a'
+    alias lla='ls -la'
 fi
 
 # PATHs and ALIASES ============================
