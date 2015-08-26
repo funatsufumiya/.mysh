@@ -2,7 +2,7 @@
 
 # Check uid of computer
 if [ ! -e "$HOME/.mysh/pc-id.txt" ]; then
-  echo "[ERROR] Create ~/pc-id.txt using 'pc-id.list.txt' first!!"
+  echo "[ERROR] Create ~/.mysh/pc-id.txt using '~/.mysh/pc-id.list.txt' first!!"
   export mysh_exited=true
 else
   export pc_uid="$(cat $HOME/.mysh/pc-id.txt)"
