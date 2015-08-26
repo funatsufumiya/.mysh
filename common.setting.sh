@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check uid of computer
-if [ !-f "$HOME/.mysh/pc-id.txt" ]; then
+if [ ! -e "$HOME/.mysh/pc-id.txt" ]; then
   echo "[ERROR] Create ~/pc-id.txt using 'pc-id.list.txt' first!!"
   exit 1
 else
