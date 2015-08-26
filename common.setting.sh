@@ -5,7 +5,7 @@ if [ ! -e "$HOME/.mysh/pc-id.txt" ]; then
   echo "[ERROR] Create ~/pc-id.txt using 'pc-id.list.txt' first!!"
   exit 1
 else
-  export pc_uid="cat $HOME/.mysh/pc-id.txt"
+  export pc_uid="$(cat $HOME/.mysh/pc-id.txt)"
 fi
 
 # Detect OS
