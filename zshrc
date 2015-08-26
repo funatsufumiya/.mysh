@@ -10,5 +10,5 @@ if test !$ZRC_LOADED; then
 	SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
 	RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
 
-	source ~/.mysh/common_setting
+	source ~/.mysh/common.setting.sh
 fi
