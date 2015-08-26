@@ -1,4 +1,4 @@
-# bash/zsh portable
+# ~/.mysh .... bash/zsh portable
 
 ## install
 
