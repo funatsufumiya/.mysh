@@ -1,7 +1,17 @@
 #!/bin/bash
 
-# SET COLOR ON `ls`
+# Detect OS
 if [ "$(uname)" = 'Darwin' ]; then
+	export IS_MAC=true
+else
+	export IS_LINUX=true
+fi
+
+_macaddr1="$(LANG=C ifconfig -a | grep HWaddr | sed -e 's/.*HWaddr \(.*\)/\1/')"
+export macaddr=$(ruby -e 'puts ARGV[0].strip' $_macaddr1)
+
+# SET COLOR ON `ls`
+if test $IS_MAC; then
     export LSCOLORS=xbfxcxdxbxegedabagacad
     alias ls='ls -G'
 else
@@ -9,12 +19,19 @@ else
     alias ls='ls --color=auto'
 fi
 
-# PATHs
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.anyenv/bin:$PATH"
+# PATHs and ALIASES ============================
 
-eval "$(anyenv init - $SHELL)"
+# ACER Linux
+if [ "74:de:2b:59:c7:3f" = "$macaddr" ]; then
 
-# ALIASES
-alias ll="ls -l"
-alias la="ls -a"
+	# PATHs
+	export PATH="$HOME/bin:$PATH"
+	export PATH="$HOME/.anyenv/bin:$PATH"
+
+	eval "$(anyenv init - $SHELL)"
+
+	# ALIASES
+	alias ll="ls -l"
+	alias la="ls -a"
+
+fi
