@@ -39,6 +39,14 @@ if [ ! "$mysh_exited" ]; then
 
   alias mbash="vim $HOME/.mysh/$pc_uid.setting.sh"
   alias sbash="exec $SHELL -l"
+  
+  function git-push(){
+    if [ $# -gt 0 ]; then
+      git add --all && git commit -m "$1" && git push
+    else
+      echo "Usage: git-push [commit-message]"
+    fi
+  }
 
   if test $IS_UBUNTU; then
     alias ai="sudo apt-get install"
