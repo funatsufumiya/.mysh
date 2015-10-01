@@ -14,6 +14,12 @@ if [ ! "$mysh_exited" ]; then
   	export IS_MAC=true
   else
   	export IS_LINUX=true
+    
+    if [ $(uname -a | grep -c Ubuntu) -gt 0 ]; then
+      export IS_UBUNTU=true
+    else
+      export IS_UBUNTU=false
+    fi
   fi
 
   # SET COLOR ON `ls`
@@ -29,6 +35,17 @@ if [ ! "$mysh_exited" ]; then
       alias ll='ls -l'
       alias la='ls -a'
       alias lla='ls -la'
+  fi
+
+  alias mbash="vim $HOME/.mysh/$pc_uid.setting.sh"
+  alias sbash="exec $SHELL -l"
+
+  if test $IS_UBUNTU; then
+    alias ai="sudo apt-get install"
+    alias au="sudo apt-get update"
+    alias aar="sudo apt-get add-apt-repository"
+    alias ar="sudo apt-get remove"
+    alias as="apt-cache search"
   fi
 
   # PATHs and ALIASES ============================
