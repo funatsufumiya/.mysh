@@ -48,6 +48,14 @@ if [ ! "$mysh_exited" ]; then
     fi
   }
 
+  function show-viewport(){
+    echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">'
+    echo ''
+    echo 'body {'
+    echo '  -webkit-text-size-adjust: 100%'
+    echo '}'
+  }
+
   if test $IS_UBUNTU; then
     alias ai="sudo apt-get install"
     alias au="sudo apt-get update"
