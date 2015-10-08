@@ -13,3 +13,11 @@ function total-size(){
     echo "Usage: total-size [path]"
   fi
 }
+
+function ip(){
+if [ $# -ne 0 ]; then
+  dig +short $1
+else
+  echo "Usage ip [hostname]"
+fi
+}
