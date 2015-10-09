@@ -58,6 +58,14 @@ if [ ! "$mysh_exited" ]; then
     echo '</style>'
   }
 
+  function ip(){
+    if [ $# -ne 0 ]; then
+      dig +short $1
+    else
+      echo "Usage: ip [host-name]"
+    fi
+  }
+
   if test $IS_UBUNTU; then
     alias ai="sudo apt-get install"
     alias au="sudo apt-get update"

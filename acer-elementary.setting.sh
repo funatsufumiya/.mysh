@@ -9,7 +9,7 @@ export LESS="-R"
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 
 # Disable Capslock
-mkdir $HOME/.keyconfig
+mkdir -p $HOME/.keyconfig
 f=$HOME/.keyconfig/disable_capslock
 if [ ! -f $f ];then
   echo "!" > $f 
