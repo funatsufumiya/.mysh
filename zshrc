@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if test !$ZRC_LOADED; then
-	export IS_ZSH=true
-
+  export IS_ZSH=true
+  
   # GIT BRANCHES
   autoload -Uz vcs_info
 
