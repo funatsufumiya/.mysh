@@ -5,10 +5,12 @@ if test !$ZRC_LOADED; then
 	# SET COLORS
 	autoload colors
 	colors
-	PROMPT="%{$fg[green]%}%m%(!.#.$) %{$reset_color%}"
-	PROMPT2="%{$fg[green]%}%_> %{$reset_color%}"
+	# PROMPT="%{$fg[green]%}%m%(!.#.$) %{$reset_color%}"
+  PROMPT="%{$fg[green]%}%m%(!.#.$) %{$reset_color%}"
+  PROMPT2="%{$fg[green]%}%_> %{$reset_color%}"
 	SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
 	RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
+  # RPROMPT="%{$fg[cyan]%}\$fu %{$reset_color%}"
 
 	source ~/.mysh/common.setting.sh
 fi
