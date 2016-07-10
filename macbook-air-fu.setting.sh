@@ -12,6 +12,9 @@ export PATH="$PATH:$HOME/.composer/vendor/bin/"
 export GOPATH="$HOME/gopath/"
 
 export FFMPEG_MP3_OPTIONS="-codec:a libmp3lame -qscale:a 2"
+export ENHANCD_FILTER="fzf:peco:gof"
+
+source "$HOME/bin/antigen.zsh"
 
 alias java="/Users/fu/.anyenv/envs/jenv/shims/java"
 alias macvim="open -a MacVim"
@@ -41,3 +44,21 @@ else
   echo "Usage ip [hostname]"
 fi
 }
+
+antigen use oh-my-zsh
+
+antigen bundle <<EOF
+
+zsh-users/zsh-completions src
+git
+heroku
+pip
+lein
+command-not-found
+
+EOF
+
+antigen theme robbyrussell 
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen apply
