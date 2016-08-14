@@ -76,6 +76,33 @@ if [ ! "$mysh_exited" ]; then
     alias pbcopy="xsel --clipboard --input"
   fi
 
+  if test $IS_ZSH; then
+    # antigenの設定
+
+    source "$HOME/bin/antigen.zsh"
+
+    antigen use oh-my-zsh
+
+    antigen bundle <<EOF
+
+zsh-users/zsh-completions src
+git
+heroku
+pip
+lein
+command-not-found
+
+EOF
+
+    antigen theme robbyrussell 
+
+    antigen bundle zsh-users/zsh-syntax-highlighting
+    antigen bundle vi-mode
+    antigen apply
+
+    # END of antigenの設定
+  fi
+
   # PATHs and ALIASES ============================
 
   if [ "$pc_uid" = "acer-elementary" ]; then
