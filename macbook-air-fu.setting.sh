@@ -52,6 +52,3 @@ else
   echo "Usage ip [hostname]"
 fi
 }
-
-bindkey '^A' beginning-of-line
-bindkey '^E' end-of-line

@@ -101,6 +101,9 @@ EOF
     antigen apply
 
     # END of antigenの設定
+
+    bindkey '^A' beginning-of-line
+    bindkey '^E' end-of-line
   fi
 
   # PATHs and ALIASES ============================
