@@ -108,9 +108,5 @@ EOF
 
   # PATHs and ALIASES ============================
 
-  if [ "$pc_uid" = "acer-elementary" ]; then
-  	source "$HOME/.mysh/acer-elementary.setting.sh"
-  elif [ "$pc_uid" = "macbook-air-fu" ]; then
-    source "$HOME/.mysh/macbook-air-fu.setting.sh"
-  fi
+  source "$HOME/.mysh/$pc_uid.setting.sh"
 fi

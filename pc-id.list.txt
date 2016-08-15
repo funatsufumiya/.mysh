@@ -1,2 +1,2 @@
 macbook-air-fu
-acer-elementary
+acer-ubuntu-16.04

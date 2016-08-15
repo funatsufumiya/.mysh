@@ -2,6 +2,7 @@
 
 if test !$ZRC_LOADED; then
   export IS_ZSH=true
+  export IS_BASH=false
   
   # GIT BRANCHES
   autoload -Uz vcs_info
