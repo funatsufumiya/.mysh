@@ -76,7 +76,8 @@ if [ ! "$mysh_exited" ]; then
     alias pbcopy="xsel --clipboard --input"
   fi
 
-  if test $IS_ZSH; then
+  if [ -n "$ZSH_VERSION" ]; then
+  # if test $IS_ZSH; then
     # antigenの設定
 
     source "$HOME/bin/antigen.zsh"
