@@ -10,6 +10,7 @@ export PATH="$PATH:/usr/local/pear/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:$HOME/.nimble/bin"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/i386-elf-gcc/bin:$PATH"
 
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig"
 
@@ -29,7 +30,11 @@ alias "aria-x3"="aria2c --conf-path=$HOME/.aria2/x3.conf"
 alias "aria-x5"="aria2c --conf-path=$HOME/.aria2/x5.conf"
 alias "aria-x7"="aria2c --conf-path=$HOME/.aria2/x7.conf"
 alias "aria-x10"="aria2c --conf-path=$HOME/.aria2/x10.conf"
+alias "aria-x20"="aria2c --conf-path=$HOME/.aria2/x20.conf"
+alias "aria-x30"="aria2c --conf-path=$HOME/.aria2/x30.conf"
 alias a="aria-x10"
+alias pigz="pigz -k"
+alias unpigz="unpigz -k"
 alias ip-global="wget -qO- http://ipecho.net/plain ; echo"
 
 function projectGenerator(){
@@ -52,3 +57,5 @@ else
   echo "Usage ip [hostname]"
 fi
 }
+
+eval "$(direnv hook zsh)"
