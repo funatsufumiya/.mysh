@@ -1,3 +1,3 @@
 #!/bin/bash
 
-antigen theme avit
+antigen theme mortalscumbag
