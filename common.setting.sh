@@ -25,13 +25,13 @@ if [ ! "$mysh_exited" ]; then
   # SET COLOR ON `ls`
   if test $IS_MAC; then
       export LSCOLORS=xbfxcxdxbxegedabagacad
-      alias ls='ls -G'
+      alias ls='ls -tG'
       alias ll="ls -l"
       alias la="ls -a"
       alias lla="ls -la"
   else
       eval `dircolors ~/.colorrc`
-      alias ls='ls --color=auto'
+      alias ls='ls -t --color=auto'
       alias ll='ls -l'
       alias la='ls -a'
       alias lla='ls -la'
