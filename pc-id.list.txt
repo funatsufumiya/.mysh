@@ -2,3 +2,4 @@ macbook-air-fu
 acer-ubuntu-16.04
 serversman-centos
 nec-lavie
+conoha-vps
