@@ -5,7 +5,7 @@
 ***You must backup your `.bashrc` and etc!!!***
 
 ```
-git clone http://github.com/atmarksharp/.mysh ~/.mysh
+git clone http://github.com/funatsufumiya/.mysh ~/.mysh
 
 ~/.mysh/install.sh
 
