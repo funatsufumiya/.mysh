@@ -113,6 +113,9 @@ EOF
 
     # END of antigenの設定
 
+    autoload -U up-line-or-beginning-search
+    autoload -U down-line-or-beginning-search
+
     bindkey '^A' beginning-of-line
     bindkey '^E' end-of-line
     bindkey '^[[A' up-line-or-beginning-search
