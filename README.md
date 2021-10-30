@@ -5,6 +5,9 @@
 ***You must backup your `.bashrc` and etc!!!***
 
 ```
+curl -L git.io/antigen > ~/bin/antigen.zsh
+chmod +x ~/bin/antigen.zsh
+
 git clone http://github.com/funatsufumiya/.mysh ~/.mysh
 
 ~/.mysh/install.sh
