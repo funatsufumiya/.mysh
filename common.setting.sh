@@ -92,8 +92,18 @@ heroku
 pip
 lein
 command-not-found
+zsh-autosuggestions
 
 EOF
+
+    # 履歴を保存するファイル
+    HISTFILE=$HOME/.zhistory
+
+    # メモリ内の履歴の数
+    HISTSIZE=1000000
+
+    # $HISTFILE に保存される履歴の数
+    SAVEHIST=1000000
 
     antigen theme robbyrussell 
 
@@ -104,8 +114,13 @@ EOF
 
     # END of antigenの設定
 
+    autoload -U up-line-or-beginning-search
+    autoload -U down-line-or-beginning-search
+
     bindkey '^A' beginning-of-line
     bindkey '^E' end-of-line
+    bindkey '^[[A' up-line-or-beginning-search
+    bindkey '^[[B' down-line-or-beginning-search
   fi
 
   # PATHs and ALIASES ============================
