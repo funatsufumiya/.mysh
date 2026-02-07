@@ -5,7 +5,7 @@ if [ ! -e "$HOME/.mysh/pc-id.txt" ]; then
   echo "[ERROR] Create ~/.mysh/pc-id.txt using '~/.mysh/pc-id.list.txt' first!!"
   export mysh_exited=true
 else
-  export pc_uid="$(cat $HOME/.mysh/pc-id.txt)"
+  export pc_uid="$(cat $HOME/.mysh/pc-id.txt | head -n 1 | tr -d '\n' | tr -d '\r')"
 fi
 
 if [ ! "$mysh_exited" ]; then
