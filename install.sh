@@ -8,11 +8,17 @@ then
     exit 1
 fi
 
-rm -I ~/.bash_profile
-rm -I ~/.zsh_profile
-rm -I ~/.bashrc
-rm -I ~/.zshrc
-rm -I ~/.colorrc
+# rm -I ~/.bash_profile
+# rm -I ~/.zsh_profile
+# rm -I ~/.bashrc
+# rm -I ~/.zshrc
+# rm -I ~/.colorrc
+
+mv ~/.bash_profile ~/.bash_profile.bak
+mv ~/.zsh_profile ~/.zsh_profile.bak
+mv ~/.bashrc ~/.bashrc.bak
+mv ~/.zshrc ~/.zshrc.bak
+mv ~/.colorrc ~/.colorrc.bak
 
 ln -s ~/.mysh/bash_profile ~/.bash_profile
 ln -s ~/.mysh/zsh_profile ~/.zsh_profile
