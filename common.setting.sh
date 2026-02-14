@@ -37,7 +37,7 @@ if [ ! "$mysh_exited" ]; then
       alias lla='ls -la'
   fi
 
-  alias mbash="vim $HOME/.mysh/$pc_uid.setting.sh"
+  alias mbash="nvim $HOME/.mysh/$pc_uid.setting.sh"
   alias sbash="exec $SHELL -l"
   
   function git-push(){
@@ -92,7 +92,6 @@ heroku
 pip
 lein
 command-not-found
-zsh-autosuggestions
 
 EOF
 
